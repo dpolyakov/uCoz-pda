@@ -1,0 +1,11 @@
+<div class="bubble <?if($IS_OWN$)?>right<?else?>left<?endif?>">
+ <p class="<?if($IS_OWN$)?>aqua<?else?>$CLASS$<?endif?>">$MESSAGE$</p>
+<?if($ANSWER$)?>
+ <div class="bubble right">
+ <p class="lemon"><b>Ответ:</b><br />$ANSWER$</p>
+ </div>
+<?endif?> 
+ <?if($USERNAME$)?><a href="$PROFILE_URL$"><b>$USERNAME$</b></a><?else?><b>$NAME$</b><?endif?> &nbsp; <span style="font-size:7pt;unicode-bidi:embed;">($DATE$ $TIME$)</span>
+<?if($ENTRY_URL$)?>[<a href="$ENTRY_URL$" target="_blank" title="Перейти на страницу материала">Материал</a>]<?endif?>
+<?if($ANSWER_URL$)?><div style="clear:both;padding:4px 0;font-size:7pt;">[<a href="$ANSWER_URL$">Ответить</a>]</div><?endif?>
+ </div>

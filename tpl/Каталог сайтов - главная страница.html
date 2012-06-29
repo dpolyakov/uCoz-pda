@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta charset="utf-8" />
+ <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+ <title>$SITE_NAME$</title>
+ <link type="text/css" rel="StyleSheet" href="/_st/pda.css" />
+ <link rel="apple-touch-icon" href="/pda_images/apple-touch-icon.png" />
+ <script type="text/javascript" src="http://s15.ucoz.net/src/jquery-1.6.1.js"></script>
+ <script type="text/javascript" src="http://s15.ucoz.net/src/uwnd.js?2"></script>
+ <script type="text/javascript">
+ window.onload = function() {
+ setTimeout(function(){window.scrollTo(0, 1);}, 100);
+ }
+ </script>
+</head>
+
+<body>
+ 
+ <div id="header">
+ <h1>$SITE_NAME$</h1>
+ <?if !($URI_ID$="page1")?> <a href="$HOME_PAGE_LINK$" id="backButton">Главная</a> <?endif?>
+ </div>
+ 
+ <h2><!--<s5184>-->Меню сайта<!--</s>--></h2>
+ 
+ $SMENU_1$
+ <h2>$MODULE_NAME$</h2>
+ <div class="site-content">
+ <h4><!--<s5218>-->Всего сайтов в каталоге<!--</s>-->: <b>$NUM_ENTRIES$</b><?if($NUM_SHOWN$)?><br /><!--<s5220>-->Показано <!--</s>-->: <b>$NUM_SHOWN$</b><?endif?></h4>
+ <!-- <body> -->$BODY$<!-- </body> -->
+<?if($PAGE_SELECTOR$)?> <div align="center">$PAGE_SELECTOR$</div><?endif?>
+ </div>
+
+
+ <?if($CATEGORIES$)?>
+<div class="site-content">
+<h4>Категории</h4>
+$CATEGORIES$
+</div>
+<?endif?>
+
+
+<?if($MODULE_SEARCH_FORM$)?>
+<div class="site-content">
+  <h4>Поиск по $MODULE_NAME$</h4>
+  $MODULE_SEARCH_FORM$ </div>
+<?endif?>
+
+<div class="site-content">
+  <h4>Поиск по сайту</h4>
+  $SEARCH_FORM$ </div>
+
+
+<?if($CALENDAR$)?>
+<div class="site-content">
+<h4>Календарь</h4>
+$CALENDAR$
+</div> 
+<?endif?>
+ 
+<div class="site-content">
+<h4>Панель пользователя</h4>
+<?if($USER_LOGGED_IN$)?>
+<div><a href="$PERSONAL_PAGE_LINK$" class="catName">$USERNAME$</a></div>
+ <div><a href="$LOGOUT_LINK$" class="catName"><!--<s5164>-->Выход<!--</s>--></a></div>
+ </ul>
+<?else?> 
+$LOG_FORM$
+<?endif?> 
+</div> 
+ 
+ 
+ <ul class="data"><li><p><a href="/index/53"><!--<s5312>-->Полная версия сайта<!--</s>--></a></p></li></ul> 
+</body>
+</html>
